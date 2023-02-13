@@ -14,21 +14,32 @@ You are working as a data scientist with the Analytics Department of Ola, focuse
   
 ❤️❤️##MY ANALYSIS❤️❤️
 
-1. I imported the data set and did some basic pre-processing on data.
-2. I checked this Dataset has 145063 rows and 551 columns.
-3. I have seen null values for some websites after some days. I concluded that new websites are created.
-4. I dropped the columns which has all null values that means the website not at all visited.
-5. I also dropped that websites which has more than 300 null values as they are newly created.
-6. After dropping off rows which has some null values there are some null values for existing rows so I filled them using backward fill method.
-7. I splitted the Page column as I need to do modelling for only english websites
-8. By plotting the graphs I concluded that among all languges English website has more no. of views and Access origin whith all_agents are visited more. Websites with access_type all_acccess are vistied more. Desktop and mobiles websites are vistied equally.
-9. Then I grouped the data for each language.
-10. Checked for stationarity using ADfuller test.
-11. As data is non stationary I removed trend and seasonality by differentaiting.
-12. ACF and PACF plots are plotted.
-13. I ran ARIMA model and selected best p and q values which has less MAPE.
-14. By using obtained best p and q values from ARIMA model I ran SARIMAX model and got best P and Q values.
-15. By using the best obtained p,q,P,Q values I ran SARIMAX model and calculated MAPE.
+1. I imported the dataset and checked the no. of rows and no. of columns.
+2. I dropped the non useful columns
+3. I grouped the data by Driver_id
+4. Calculated target by placing 0 if last working date is not null and 1 if last working date is mentioned.
+5. Calculated Income_increase and Quaterly_income_increase columns.
+6. Encoded City column using Target Encoding as it has more no. of values.
+7. Splitted the data into training and test data.
+8. By seeing the plots I concluded that 
+        There are more males than females
+        There are more employees from City C20
+        There are almost equal employees from all education levels
+        There are more people from Joining Designation with 1
+        There are more drivers with grade 2 attime of reporting
+        There are more drivers whose quaterly rating with 1
+        Quaterly income and Monthly income increase are very less
+9. By using HaetMap I concluded that there are some coulmns correlated but I didn't remove anything as there is less data.
+10. No missing value treatment is required as there are no missing values.
+11. I removed outliers using IQR method.
+12. Scaled the data using Standard Scaling Method.
+13. Here am Concentrating more on FN so am considering Recall as my parameter.
+14. By training the model using Random Forest I got 0.92 as Recall_Score which is considered as good.
+15. By training the model using Boostimg I got 0.85 as Recall_score.
+16. ROC curves looks fine for both the models.
+17. By calculating feature_importances of both these models I can say that Age, Total business value, City and Income are playing vital role for this business problem.
+18. As I got good Recall_score I can consider any one of these columns.
+
 
 
 
