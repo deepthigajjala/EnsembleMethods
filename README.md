@@ -38,7 +38,7 @@ You are working as a data scientist with the Analytics Department of Ola, focuse
 15. By training the model using Boostimg I got 0.85 as Recall_score.
 16. ROC curves looks fine for both the models.
 17. By calculating feature_importances of both these models I can say that Age, Total business value, City and Income are playing vital role for this business problem.
-18. As I got good Recall_score I can consider any one of these columns.
+18. As I got good Recall_score I can consider any one of these models.
 
 
 
